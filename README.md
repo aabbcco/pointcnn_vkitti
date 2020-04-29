@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PointCNN: Convolution On X-Transformed Points
 
 Created by <a href="http://yangyan.li" target="_blank">Yangyan Li</a>, Rui Bu, Mingchao Sun, Wei Wu, Xinhan Di, and <a href="https://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a>.
@@ -214,7 +213,3 @@ Here we list the commands for training/evaluating PointCNN on classification and
   cd <your path>/PointCNN
   tensorboard --logdir=../models/<seg/cls> <--port=6006>
   ```
-=======
-# pointcnn_vkitti
-train pointcnn using vkitti
->>>>>>> 34d31d9ddf24aff786219cc228fe56def74a4ab7
