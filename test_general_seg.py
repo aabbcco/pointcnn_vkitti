@@ -16,15 +16,16 @@ import numpy as np
 import tensorflow as tf
 from datetime import datetime
 
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--filelist', '-t', help='Path to input .h5 filelist (.txt)', required=True)
-    parser.add_argument('--load_ckpt', '-l', help='Path to a check point file for load', required=True)
-    parser.add_argument('--max_point_num', '-p', help='Max point number of each sample', type=int, default=512)
+    parser.add_argument('--filelist', '-t',default='../data/scannet/seg/test_files.txt',help='Path to input .h5 filelist (.txt)')
+    parser.add_argument('--load_ckpt', '-l',default='../models/seg/pointcnn_seg_scannet_x8_2048_fps_2020-08-05-19-36-36_81774/ckpts/iter-200000', help='Path to a check point file for load')
+    parser.add_argument('--max_point_num', '-p', help='Max point number of each sample', type=int, default=8192)
     parser.add_argument('--repeat_num', '-r', help='Repeat number', type=int, default=1)
-    parser.add_argument('--model', '-m', help='Model to use', required=True)
-    parser.add_argument('--setting', '-x', help='Setting to use', required=True)
+    parser.add_argument('--model', '-m',default='pointcnn_seg', help='Model to use')
+    parser.add_argument('--setting', '-x',default='scannet_x8_2048_fps', help='Setting to use')
     parser.add_argument('--save_ply', '-s', help='Save results as ply', action='store_true')
     args = parser.parse_args()
     print(args)

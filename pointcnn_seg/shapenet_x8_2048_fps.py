@@ -4,9 +4,9 @@ num_class = 50
 
 sample_num = 2048
 
-batch_size = 16
+batch_size = 6
 
-num_epochs = 1024
+num_epochs = 200
 
 label_weights = []
 
